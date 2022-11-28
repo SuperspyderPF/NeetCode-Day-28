@@ -1,0 +1,1 @@
+rotateRight=(h1,k,n=[])=>{while(h1){n.push(h1.val);h1=h1.next;}n.unshift(...n.splice(-k%n.length));h=n.reverse().reduce((acc,curr)=>{if(acc==null){acc=new ListNode(curr);}else{acc=new ListNode(curr,acc);}return acc;},null);return h}
